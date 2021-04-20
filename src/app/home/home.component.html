@@ -1,0 +1,18 @@
+<body>
+    <section>
+        <div class="example-button-row">
+            <button mat-button (click)="exibirAlunos()" mat-raised-button color="primary">Alunos</button>
+            <button mat-button (click)="exibirProfessores()" mat-raised-button color="basic">Professores</button>
+            <button mat-button (click)="exibirTurmas()" mat-raised-button color="accent">Turmas</button>
+        </div>
+    </section>
+    <mat-divider></mat-divider>
+
+    <section>
+        <div>
+            <spa-professores *ngIf="exibeProfessores"></spa-professores>
+            <spa-alunos *ngIf="exibeAlunos"></spa-alunos>
+            <spa-turmas *ngIf="exibeTurmas"></spa-turmas>
+        </div>
+    </section>
+</body>
